@@ -26,7 +26,7 @@ There are patches, made by @SibrenVasse, that brings two features: hide menu bar
 ```bash
 ./install.sh [--nomenu] [--minimizetotray]
 ```
-Don't worry on the parameter's order. Just as said in the previous section, there are a `--noclean` parameter as well, just for the case you want to deal with built junk after the (re)building process.
+Don't worry on the parameter's order. Just as said in the previous section, there is a `--noclean` parameter as well, just for the case you want to deal with built junk after the (re)building process.
 
 
 ### Uninstall
