@@ -22,7 +22,7 @@ chmod +x ./install.sh
 Then, you'll be promped to input your root password and the script will make all the job (check/install dependencies, rebuild node_modules), and everything in a *clean* way: after the building process, the working directory will be automatically cleaned, unless you use the `--noclean` parameter on `install.sh` script. All the process is divided in steps that are already based on the standard [xbps-src](https://github.com/void-linux/void-packages/) routines. The idea for a near future is to package it all in an authentic Void package, or even in Flatpak, with some help of [electron-packager](https://github.com/electron/electron-packager).
 
 ### Additional options
-There are patches, made by @SibrenVasse, that brings two features: hide menu bar and enable *minimize to tray* function. In this script, by default (and personal choice of someone that uses tiling wm and don't relies that much on software that wasn't packaged for our OS), both patches are disabled. But you can easily enable any of these patches just using parameters beside `./install sh`:
+There are patches, made by @SibrenVasse, that brings two features: hide menu bar and enable *minimize to tray* function. In this script, by default (and personal choice of someone that uses tiling wm and don't relies that much on software that wasn't packaged for our OS), both patches are disabled. But you can easily enable any of these patches just using parameters beside `./install.sh`:
 ```bash
 ./install.sh [--nomenu] [--minimizetotray]
 ```
