@@ -33,7 +33,13 @@ Don't worry on the parameter's order. Just as said in the previous section, ther
 With these scripts, you can easily uninstall Deezer by running `uninstall.sh` script. 
 
 ### Update
-You can easily update the script directly, just changing Electron and Deezer version parameters (as well as SHA256 for the Deezer's setup file). If you don't feel safe doing that, you can always get updated just running **the same** 
+You can easily update the script directly, just changing Electron and Deezer version parameters (as well as SHA256 for the Deezer's setup file). If you don't feel safe doing that, you can always get updated just by running:
+
+```bash
+cd deezer-void #the folder where you cloned this repo
+git pull
+chmod +x ./install.sh && ./install.sh
+```
 
 ## Debugging
 
