@@ -133,7 +133,7 @@ pre_patch() {
     printf "OK."
     cd resources/ || exit 1
 
-    printf "\nExtracing app bundle... "
+    printf "\nExtracting app bundle... "
     (rm -rf app "$builddir/npm_temp" || true) > /dev/null
     asar extract app.asar app &> /dev/null
     printf "OK."
