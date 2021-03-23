@@ -1,7 +1,7 @@
 # Deezer for Void Linux
 
 ![Screenshot of Deezer Desktop running on Void Linux with the media player integration visible](screenshot.png)
-<div align="center"><sup>Deezer on Void. I know, Dark would be some much better... See <a href="#issues">issues</a>!</sup></div>
+<div align="center"><sup>Deezer on Void. I know, Dark would be so much better... See <a href="#issues">issues</a>!</sup></div>
 
 
 Just another of that scripts that ports unsupported software to our free OS paradise. Based on the [script for Ubuntu made by siphomateke](https://github.com/siphomateke/deezer) and, of course, on [the original PKGBUILD made by SibrenVasse](https://aur.archlinux.org/packages/deezer/).
