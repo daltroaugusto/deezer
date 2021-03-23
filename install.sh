@@ -204,5 +204,8 @@ installation() {
     printf "OK.\n\n"
 }
 
+printf "\nHey, welcome!\nJust enter with your root password and I'll do the hard work.\n"
+sudo true
+
 pre_extract && do_extract && pre_patch && do_patch && installation
 echo "Successfully installed Deezer Desktop!"
