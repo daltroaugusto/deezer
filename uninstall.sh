@@ -14,4 +14,4 @@ done
 
 sudo update-desktop-database --quiet
 
-printf "OK.\nDeezer has been uninstalled."
+printf "OK.\nDeezer has been uninstalled.\n\n"
