@@ -13,8 +13,8 @@ dir_electronrebuild="$PWD/builddir/electron-rebuild"
 _electronversion="6.1.12"
 
 # custom patches. you can select those you want
-_nomenu=no #yes/no
-_minimizetotray=no #yes/no
+nomenu=no #yes/no
+minimizetotray=no #yes/no
 
 # default parameters
 noclean=no
@@ -24,6 +24,12 @@ for arg in "$@"; do
     case "$arg" in
         "--noclean")
             noclean=yes
+        ;;
+        "--nomenu")
+            nomenu=yes
+        ;;
+        "--minimizetotray")
+            minimizetotray=yes
         ;;
     esac
 done
@@ -175,8 +181,8 @@ do_patch() {
     prettier --write "build/*.js"
 
     # Disable menu bar
-    [ $_nomenu == "yes" ] && patch -p1 < "$patchesdir/menu-bar.patch"
-    [ $_minimizetotray == "yes" ] && patch -p1 < "$patchesdir/quit.patch"
+    [ $nomenu == "yes" ] && patch -p1 < "$patchesdir/menu-bar.patch"
+    [ $minimizetotray == "yes" ] && patch -p1 < "$patchesdir/quit.patch"
     # Monkeypatch MPRIS D-Bus interface
     patch -p1 < "$patchesdir/0001-MPRIS-interface.patch"
 
