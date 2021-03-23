@@ -16,6 +16,18 @@ _electronversion="6.1.12"
 _nomenu=no #yes/no
 _minimizetotray=no #yes/no
 
+# default parameters
+noclean=no
+
+# interpret parameters
+for arg in "$@"; do
+    case "$arg" in
+        "--noclean")
+            noclean=yes
+        ;;
+    esac
+done
+
 # ----------------------- "METHODS"
 install_node_module() {
     printf "\nChecking if module %s is installed... " "$1"
@@ -204,8 +216,18 @@ installation() {
     printf "OK.\n\n"
 }
 
+do_clean() {
+    printf "Cleaning build directories... "
+    rm -r $builddir
+    printf "OK.\n"
+}
+
 printf "\nHey, welcome!\nJust enter with your root password and I'll do the hard work.\n"
 sudo true
 
 pre_extract && do_extract && pre_patch && do_patch && installation
-echo "Successfully installed Deezer Desktop!"
+
+# optional methods
+[ $noclean == "no" ] && do_clean
+
+printf "Successfully installed Deezer Desktop!\n"
