@@ -1,6 +1,7 @@
 # Deezer for Void Linux
 
 ![Screenshot of Deezer Desktop running on Void Linux with the media player integration visible](screenshot.png)
+<div align="center"><sup>Deezer on Void. I know, Dark would be some much better... See <a href="#issues">issues</a>!</sup></div>
 
 Just another of that scripts that ports unsupported software to our free OS paradise. Based on the [script for Ubuntu made by siphomateke](https://github.com/siphomateke/deezer) and, of course, on [the original PKGBUILD made by SibrenVasse](https://aur.archlinux.org/packages/deezer/).
 
@@ -44,17 +45,17 @@ deezer
 To run the application with devtools by running
 
 ```bash
-env DZ_DEVTOOLS=yes electron /usr/share/deezer/app.asar
+env DZ_DEVTOOLS=yes $HOME/electron6/node_modules/.bin/electron /usr/share/deezer/app.asar
 ```
 
 To debug node, you can extract the source files to a directory and inspect the node process by attaching using the chromium debugging tools. (<https://www.electronjs.org/docs/tutorial/debugging-main-process>)
 
 ```bash
 asar extract /usr/share/deezer/app.asar $dest
-electron --inspect-brk=$port $dest
+$HOME/electron6/node_modules/.bin/electron --inspect-brk=$port $dest
 ```
 ## Issues
 For some strange (and unknown, for me) reason(s), I was unable to enable *dark mode*, at least in my i3wm-only environment. I'd appreciate if someone could test this feature in some desktop environment. Additional debugging (and patching?) may be required.
 
 
-<div align="right"><small>Proudly written with help of <a href="https://github.com/benweet/stackedit">StackEdit</a>.</small></div>
+<div align="right"><h6>Proudly written with help of <a href="https://github.com/benweet/stackedit">StackEdit</a>.</h6></div>
